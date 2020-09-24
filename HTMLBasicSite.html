@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a id="YoutubeLink" target="_blank" href="https://www.youtube.com/user/Joltzdude139"></a>
+
+    <table>
+        <tr> 
+            <td>  <img src="Photos\circle-TSM.png"  width="100px" height="100px"> </td>
+            <td> 
+                <h1><strong> Bassam B. Ali </strong> </h1> 
+                <p> Student at <em> New Jersey Institute of Technology </em> </p>
+                <p> Computer Science major and gamer. <strong> Site coming soon </strong> </p>
+            </td>
+        </tr>
+    </table>
+
+    <h1> Skills </h1>
+    <table>
+        <td>
+            <table>
+                <h2> Games </h2> 
+                <tr>
+                    <td> Overwatch    </td>
+                    <td> ⭐⭐⭐⭐    </td>
+                </tr>
+                <tr>
+                    <td> League of Legends    </td>
+                    <td> ⭐⭐⭐⭐⭐    </td>
+                </tr>
+                <tr>
+                    <td> Apex Legends    </td>
+                    <td> ⭐⭐⭐    </td>
+                </tr>
+                <tr>
+                    <td> Minecraft    </td>
+                    <td> ⭐⭐⭐⭐⭐    </td>
+                </tr>
+
+            </table>
+
+        </td>
+
+        <td>
+            <h2> School </h2>
+            <table>
+
+                <tr>
+                    <td> Python    </td>
+                    <td> ⭐⭐⭐⭐⭐    </td>
+                </tr>
+                <tr>
+                    <td> Java    </td>
+                    <td> ⭐⭐⭐⭐    </td>
+                </tr>
+                <tr>
+                    <td> HTML    </td>
+                    <td> ⭐⭐⭐⭐    </td>
+                </tr>
+                <tr>
+                    <td> Math    </td>
+                    <td> ⭐⭐⭐⭐⭐⭐   </td>
+                </tr>
+
+            </table>
+
+        </td>
+
+    </table>
+
+    <p style="margin-bottom: 30px; width: 300px"> </p>
+
+    <form action = "">
+        <label for=""> Username: </label>
+        <input type="text" name="textBoxes" value="" placeholder="Enter Username"> 
+        <br>
+
+        <p style="margin-bottom: 10px; width: 300px"> </p>
+        
+        <label for=""> Password: </label>
+        <input type="password" name="textBoxes" value="" placeholder="Enter Password"> 
+        <br>
+    
+
+        <label for=""> Do you want to subscribe to a youtuber? </label>
+        <input type="radio" name="subscribe" value="yes" /> Yes
+        <input type="radio" name="subscribe" value="no" /> No
+        <br>
+
+         <p style="margin-bottom: 10px; width: 300px"> </p>
+
+        <input type="button" id="button" value="Submit">
+    </form>
+
+    <script>
+
+        // <a id="YoutubeLink" target="_blank" href="https://www.youtube.com/user/Joltzdude139"></a>
+        // let YoutubeLink =  (<a href="https://www.youtube.com/user/Joltzdude139" target="_blank"></a>);
+
+        const button = document.querySelector('#button');
+        // handle click button
+
+        button.onclick = function () {
+            const rbs = document.querySelectorAll('input[name="subscribe"]');
+
+            const tbs = document.querySelectorAll('input[name="textBoxes"]');
+
+            let selectedValue;
+            String = 'https://www.youtube.com/user/Joltzdude139';
+            // let yes = 'yes'
+
+            for(const tb of tbs){
+                if(tb.value == ''){
+                    alert('Username and/or Password blank.');
+                    break;
+                }
+            }
+
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+            if (selectedValue == 'yes'){
+                open('https://www.youtube.com/user/Joltzdude139', '_blank' )
+                // <a href="https://www.youtube.com/user/Joltzdude139" target="_blank"></a>
+                // alert(YoutubeLink);
+            }
+            else if (selectedValue == 'no'){
+                location.reload();
+            }
+        };
+    </script>
+
+</body>
+</html>
